@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison</title>
+</head>
+<body>
+  <canvas width="800" height="450" id="canvas"></canvas> 
+  <script> 
+    //le fond violet
+    var canvas = document.getElementById('canvas'); 
+    var ctx = canvas.getContext('2d'); 
+    var grd = ctx.createLinearGradient(20, 20, 20, 400);
+    grd.addColorStop(0, "purple");
+    // grd.addColorStop(1, "white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(20,20,500,400);
+    
+    //le fond rose
+    var grd1 = ctx.createLinearGradient(20,400,20,600);
+    grd1.addColorStop(0, "#DB7093");
+    // grd1.addColorStop(1, "white");
+    ctx.fillStyle = grd1;
+    ctx.fillRect(20,400,500,600);
+
+    // couleur orangé de la maison
+    ctx.fillStyle = "#FF5733"; 
+    // positionnement du carré de la maison
+    ctx.fillRect(175,200,200,200); 
+
+    //le toit
+    ctx.beginPath();
+    ctx.moveTo(160, 200);
+    ctx.lineTo(275, 120);
+    ctx.lineTo(390, 200);
+    // couleur vert du toit
+    ctx.fillStyle = '#138D75';
+    ctx.fill();
+
+    //les fenêtres
+    ctx.fillStyle = "white"; 
+    ctx.fillRect(190,220,50,50);
+    ctx.fillRect(310,220,50,50);
+
+    //la porte rose claire
+    ctx.fillStyle = "	#FFB6C1"; 
+    ctx.fillRect(240,310,70,90);
+
+
+    //frame
+    // ctx.fillStyle = "black"; 
+    // ctx.strokeRect(215,215,110,130); 
+
+    //coeur
+    ctx.beginPath();
+    ctx.moveTo(95, 60);
+    ctx.bezierCurveTo(95, 57, 90, 45, 70, 45);
+    ctx.bezierCurveTo(40, 45, 40, 82.5, 40, 82.5);
+    ctx.bezierCurveTo(40, 100, 60, 122, 95, 140);
+    ctx.bezierCurveTo(130, 122, 150, 100, 150, 82.5);
+    ctx.bezierCurveTo(150, 82.5, 150, 45, 120, 45);
+    ctx.bezierCurveTo(105, 45, 95, 57, 95, 60);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+
+    //pacman
+    // ctx.beginPath();
+    // ctx.arc(420,100,50,0.2,1.8*Math.PI);
+    // ctx.lineTo(420,100);
+    // ctx.fillStyle = "#FFC300";
+    // ctx.fill();
+  </script>  
+</body>
+</html>
+</body>
+</html>
+
+  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biscuit</title>
+</head>
+<body>
+  <canvas width="800" height="600" id="canvas"></canvas> 
+  <script> 
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    //la tete
+    ctx.fillStyle = "#976F10";
+    ctx.beginPath();
+    ctx.arc(200, 200, 60, 0, Math.PI * 2);
+    ctx.fill();
+
+    //oeil gauche
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    ctx.arc(180, 190, 10, 0, Math.PI * 2);
+    ctx.fill();
+
+    //oeil droit
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    ctx.arc(220, 190, 10, 0, Math.PI * 2);
+    ctx.fill();
+
+    //sourcil G
+    ctx.strokeStyle = "yellow";
+    ctx.lineWidth= 4;
+    ctx.beginPath();
+    ctx.moveTo(190, 170);
+    ctx.quadraticCurveTo(180, 160, 170, 170);
+    ctx.stroke();
+
+    //sourcil D
+    ctx.strokeStyle = "yellow";
+    ctx.lineWidth= 4;
+    ctx.beginPath();
+    ctx.moveTo(210, 170);
+    ctx.quadraticCurveTo(220, 160, 230, 170);
+    ctx.stroke();
+
+    //bouche
+    ctx.strokeStyle = "red";
+    ctx.lineWidth= 5;
+    ctx.beginPath();
+    ctx.moveTo(220, 210);
+    ctx.quadraticCurveTo(200, 215, 180, 210);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(220, 210);
+    ctx.quadraticCurveTo(200, 250, 180, 210);
+    ctx.stroke();
+
+    //bras
+    ctx.strokeStyle = "#976F10";
+    ctx.beginPath();
+    ctx.moveTo(70, 250);
+    ctx.lineTo(320, 250);
+    ctx.arc(330, 265, 15, 1.5 * Math.PI, Math.PI * 0.5, false);
+    ctx.stroke();
+    ctx.lineTo(70, 280);
+    ctx.stroke();
+    ctx.arc(70, 265, 15, 1.5 * Math.PI, Math.PI * 0.5, true);
+    ctx.stroke();
+    ctx.fillStyle = "#976F10";
+    ctx.fill();
+
+    //corps et pied
+    ctx.fillStyle = "#976F10";
+    ctx.beginPath();
+    ctx.moveTo(140, 280);
+    ctx.lineTo(140, 500);
+    ctx.arc(160, 500, 20, Math.PI, Math.PI * 2 , true);
+    ctx.lineTo(180, 450);
+    ctx.arc(200, 450, 20, Math.PI, Math.PI * 2 , false);
+    ctx.lineTo(220, 500);
+    ctx.arc(240, 500, 20, Math.PI, Math.PI * 2 , true);
+    ctx.lineTo(260, 280);
+    ctx.fill();
+
+    //les bouttons
+    ctx.fillStyle = "purple";
+    ctx.beginPath();
+    ctx.moveTo(200, 270);
+    ctx.arc(200, 280, 10, 0, Math.PI * 2);
+    ctx.moveTo(200, 310);
+    ctx.arc(200, 320, 10, 0, Math.PI * 2);
+    ctx.fill();
+  </script>  
+</body>
+</html>
+</body>
+</html>
